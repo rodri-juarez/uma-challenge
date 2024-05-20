@@ -47,10 +47,10 @@ export default function Calendar() {
             date={daySelected.date}
           />
           :
-          <div className="w-auto h-auto px-2">
+          <div className="w-auto h-auto px-2 max-w-[1000px] md:min-w-[35%]">
             <MonthHeader month={format(firstDayCurrentMonth, 'MMMM yyyy')} nextMonth={nextMonth} previousMonth={previousMonth} />
             <WeekHeader />
-            <div className="grid grid-cols-7 mt-2">
+            <div className="grid grid-cols-7 mt-2 2xl:min-h-[50vh] w-full">
               {isCalendarAvailable && !isError ? data?.days.map((day: CalendarDay, dayIdx: number) => (
                 <Day key={day.date} selectDay={setDaySelected} openModal={openModal} day={day} index={dayIdx} />
               )) :

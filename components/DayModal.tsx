@@ -32,9 +32,9 @@ export default function DayModal({open, closeModal, mediaType, imgUrl, title, de
       }}
       open={open}
       handler={closeModal}
-      className="bg-white flex flex-col h-auto md:h-[60%] w-full md:w-[60%] md:ml-[20%] mt-[20%] md:mt-[7%] overflow-auto justify-center items-center"
+      className="bg-white flex flex-col h-[70vh] 2xl:max-w-[30vw] 2xl:ml-[35vw] md:h-[60%] w-full md:w-[60%] md:ml-[20%] mt-[15vh] md:mt-[15vh] overflow-auto justify-center items-center"
     >
-      <DialogBody className="w-full h-full md:max-h-[70vh] p-0">
+      <DialogBody className="w-full h-full p-0">
         {
           mediaType === 'image' ?
 
@@ -43,10 +43,11 @@ export default function DayModal({open, closeModal, mediaType, imgUrl, title, de
               height={100}
               style={{
                 width: '100%',
-                height: '35vw',
+                height: 'auto',
               }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"
               objectFit="cover"
+              className="md:max-h-[35vw]"
               alt={title}
               src={imgUrl}
               priority

@@ -11,7 +11,7 @@ interface Props {
 export default function MonthHeader({month, nextMonth, previousMonth}: Props) {
   return (
     <div className="flex items-center w-full">
-      <h2 className="flex-auto font-semibold text-gray-900 text-2xl md:text-3xl">
+      <h2 data-test="month-selected" className="flex-auto font-semibold text-gray-900 text-2xl md:text-3xl">
         {month}
       </h2>
       <button

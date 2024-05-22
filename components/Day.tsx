@@ -27,28 +27,28 @@ const Day = ({selectDay, openModal, day, index}: DayProps) => {
   }
 
   return (
-    <>
-      <div
-        className={classNames(
-          index === 0 ? day.date && colStartClasses[getDay(day.date) + 1] : '',
-          'w-12 h-12 md:w-24 md:h-24 lg:w-32 lg:h-32 m-2 flex justify-center items-center bg-red-300',
-        )}
-        style={{backgroundImage: `url(${day.mediaType === 'image' ? day.imgUrl : day.thumbnailUrl})`, backgroundSize: 'cover'}}
+    <div
+      data-test="calendar-day"
+      className={classNames(
+        index === 0 ? day.date && colStartClasses[getDay(day.date) + 1] : '',
+        'w-12 h-12 md:w-24 md:h-24 lg:w-32 lg:h-32 m-2 flex justify-center items-center bg-red-300',
+      )}
+      style={{backgroundImage: `url(${day.mediaType === 'image' ? day.imgUrl : day.thumbnailUrl})`, backgroundSize: 'cover'}}
+    >
+      <button
+        data-test="open-day-button"
+        type="button"
+        onClick={() => {
+          selectDay(day);
+          openModal();
+        }}
+        className="font-semibold flex-col mx-auto text-white text-xl flex h-full items-center justify-center w-full cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
       >
-        <button
-          type="button"
-          onClick={() => {
-            selectDay(day);
-            openModal();
-          }}
-          className="font-semibold flex-col mx-auto text-white text-xl flex h-full items-center justify-center w-full cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
-        >
-          <div>
-            {format(day.date.replace(/-/g, '\/'), 'd')}
-          </div>
-        </button>
-      </div>
-    </>
+        <div>
+          {format(day.date.replace(/-/g, '\/'), 'd')}
+        </div>
+      </button>
+    </div>
   )
 }
 

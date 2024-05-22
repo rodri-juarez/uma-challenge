@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# UMA Calendar (calendar)
 
-## Getting Started
+Uma Calendar is a web application that allows users to view a calendar where each day has the photo of the day provided by NASA.
 
-First, run the development server:
+_Desktop_
+
+<p align="center" width="100%">
+<img  src="https://i.ibb.co/GPMNvb1/Captura-desde-2024-05-22-12-45-31.png" width="360" height='240'>
+<img  src="https://i.ibb.co/w6jM5pJ/Captura-desde-2024-05-22-13-06-55.png" width="360" height='240'>
+</p>
+
+## Link to WebApp
+
+[Deploy](https://uma-challenge.vercel.app/)
+
+### Features
+
+* Calendar: See the different months, only the past months are available, future months will be available after NASA publishes the corresponding photos.
+
+* Day detail: See the title and description of the photo and add your comments. In some cases, videos are available instead of photos.
+
+### Technologies
+
+<br/>
+<ul align="start">
+
+- <a href="https://nextjs.org/" target="_blank"> <img src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png" alt="Nextjs" width="40" height="40" /> Next.js</a>
+
+- <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/> Typescript</a>
+
+- <a href="https://react.dev/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/800px-React.svg.png" alt="React" width="40" height="40"/> React</a>
+
+- <a href="https://firebase.google.com/docs/firestore?hl=es-419" target="_blank"> <img src="https://i.ibb.co/BCvptNx/firestore6915.jpg" alt="Firestore" width="40" height="40"/> Firestore</a>
+
+- <a href="https://expressjs.com" target="_blank"> <img src="https://i.ibb.co/m4BH5f1/1-express.webp" alt="Express" width="40" height="40"/> Express</a>
+
+- <a href="https://tailwindcss.com/" target="_blank"> <img src="https://files.raycast.com/nwt9ncojkvwmjfkaada8upafvpnu" alt="Tailwind" width="40" height="40"/> Tailwind</a>
+
+- <a href="https://tanstack.com/query/v3/" target="_blank"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*elhu-42TzQEdsFjKDbQhhA.png" alt="TanStack Query" width="40" height="40"/> React Query</a>
+
+</ul>
+<br/>
+<br/>
+
+### Installation
+
+To run this project use the commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  yarn && yarn dev
+  npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tests
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The tests were performed with _Cypress_ to E2E tests, to run the tests use the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn cypress:open or npm run cypress:open
+```
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+Node Version : > 18v
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
